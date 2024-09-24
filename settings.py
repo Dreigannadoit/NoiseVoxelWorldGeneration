@@ -8,6 +8,12 @@ width = 1600/2
 height = 900/2
 WIN_RES = glm.vec2( width, height )
 
+# Chunk Description
+CHUNK_SIZE = 32
+H_CHUNK_SIZE = CHUNK_SIZE // 2
+CHUNK_AREA = math.pow(CHUNK_SIZE, 2)
+CHUNK_VOL = CHUNK_AREA * CHUNK_SIZE
+
 # camera
 ASPECT_RATIO = WIN_RES.x / WIN_RES.y
 FOV_DEG = 50
@@ -20,7 +26,7 @@ PITCH_MAX = glm.radians(89)
 # player
 PLAYER_SPEED = 0.005
 PLAYER_ROT_SPEED = 0.003
-PLAYER_POS = glm.vec3(0, 0, 1)
+PLAYER_POS = glm.vec3(H_CHUNK_SIZE, CHUNK_SIZE, 1.5 * CHUNK_SIZE)
 MOUSE_SENSITIVITY = 0.002
 
 
