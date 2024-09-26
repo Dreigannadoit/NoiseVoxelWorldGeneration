@@ -1,10 +1,8 @@
-import glm
-
-from settings import  *
+from settings import *
 
 
 class Camera:
-    def __init__(self,position, yaw, pitch):
+    def __init__(self, position, yaw, pitch):
         self.position = glm.vec3(position)
         self.yaw = glm.radians(yaw)
         self.pitch = glm.radians(pitch)
@@ -17,13 +15,13 @@ class Camera:
         self.m_view = glm.mat4()
 
     def update(self):
-        self.update_vec()
+        self.update_vectors()
         self.update_view_matrix()
 
     def update_view_matrix(self):
         self.m_view = glm.lookAt(self.position, self.position + self.forward, self.up)
 
-    def update_vec(self):
+    def update_vectors(self):
         self.forward.x = glm.cos(self.yaw) * glm.cos(self.pitch)
         self.forward.y = glm.sin(self.pitch)
         self.forward.z = glm.sin(self.yaw) * glm.cos(self.pitch)
@@ -56,3 +54,45 @@ class Camera:
 
     def move_back(self, velocity):
         self.position -= self.forward * velocity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

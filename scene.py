@@ -1,7 +1,5 @@
 from settings import *
-from meshes.quad_mesh import QuadMesh
 from world_objects.chunk import Chunk
-
 
 class Scene:
     def __init__(self, app):
@@ -11,5 +9,48 @@ class Scene:
     def update(self):
         pass
 
-    def reder(self):
+    def render(self):
         self.chunk.render()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
